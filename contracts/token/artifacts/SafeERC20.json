@@ -1,0 +1,60 @@
+{
+	"deploy": {
+		"VM:-": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"main:1": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"ropsten:3": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"rinkeby:4": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"kovan:42": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"goerli:5": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"Custom": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		}
+	},
+	"data": {
+		"bytecode": {
+			"linkReferences": {},
+			"object": "604c602c600b82828239805160001a60731460008114601c57601e565bfe5b5030600052607381538281f30073000000000000000000000000000000000000000030146080604052600080fd00a165627a7a72305820291bcfba42a043c7abf2bedb2f0501c28f2502c8398832bafa5862a185e4b3140029",
+			"opcodes": "PUSH1 0x4C PUSH1 0x2C PUSH1 0xB DUP3 DUP3 DUP3 CODECOPY DUP1 MLOAD PUSH1 0x0 BYTE PUSH1 0x73 EQ PUSH1 0x0 DUP2 EQ PUSH1 0x1C JUMPI PUSH1 0x1E JUMP JUMPDEST INVALID JUMPDEST POP ADDRESS PUSH1 0x0 MSTORE PUSH1 0x73 DUP2 MSTORE8 DUP3 DUP2 RETURN STOP PUSH20 0x0 ADDRESS EQ PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x0 DUP1 REVERT STOP LOG1 PUSH6 0x627A7A723058 KECCAK256 0x29 SHL 0xcf 0xba TIMESTAMP LOG0 NUMBER 0xc7 0xab CALLCODE 0xbe 0xdb 0x2f SDIV ADD 0xc2 DUP16 0x25 MUL 0xc8 CODECOPY DUP9 ORIGIN 0xba STATICCALL PC PUSH3 0xA185E4 0xb3 EQ STOP 0x29 ",
+			"sourceMap": "86:746:2:-;;132:2:-1;166:7;155:9;146:7;137:37;252:7;246:14;243:1;238:23;232:4;229:33;270:1;265:20;;;;222:63;;265:20;274:9;222:63;;298:9;295:1;288:20;328:4;319:7;311:22;352:7;343;336:24"
+		},
+		"deployedBytecode": {
+			"linkReferences": {},
+			"object": "73000000000000000000000000000000000000000030146080604052600080fd00a165627a7a72305820291bcfba42a043c7abf2bedb2f0501c28f2502c8398832bafa5862a185e4b3140029",
+			"opcodes": "PUSH20 0x0 ADDRESS EQ PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x0 DUP1 REVERT STOP LOG1 PUSH6 0x627A7A723058 KECCAK256 0x29 SHL 0xcf 0xba TIMESTAMP LOG0 NUMBER 0xc7 0xab CALLCODE 0xbe 0xdb 0x2f SDIV ADD 0xc2 DUP16 0x25 MUL 0xc8 CODECOPY DUP9 ORIGIN 0xba STATICCALL PC PUSH3 0xA185E4 0xb3 EQ STOP 0x29 ",
+			"sourceMap": "86:746:2:-;;;;;;;;"
+		},
+		"gasEstimates": {
+			"creation": {
+				"codeDepositCost": "15200",
+				"executionCost": "116",
+				"totalCost": "15316"
+			},
+			"internal": {
+				"safeApprove(contract IERC20,address,uint256)": "infinite",
+				"safeTransfer(contract IERC20,address,uint256)": "infinite",
+				"safeTransferFrom(contract IERC20,address,address,uint256)": "infinite"
+			}
+		},
+		"methodIdentifiers": {}
+	},
+	"abi": []
+}

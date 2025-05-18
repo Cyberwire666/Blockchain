@@ -1,0 +1,361 @@
+{
+	"compiler": {
+		"version": "0.4.24+commit.e67f0147"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "duration",
+				"outputs": [
+					{
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "cliff",
+				"outputs": [
+					{
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "token",
+						"type": "address"
+					}
+				],
+				"name": "release",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "beneficiary",
+				"outputs": [
+					{
+						"name": "",
+						"type": "address"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [],
+				"name": "renounceOwnership",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "token",
+						"type": "address"
+					}
+				],
+				"name": "revoke",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "revocable",
+				"outputs": [
+					{
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"name": "",
+						"type": "address"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "isOwner",
+				"outputs": [
+					{
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"name": "token",
+						"type": "address"
+					}
+				],
+				"name": "released",
+				"outputs": [
+					{
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "start",
+				"outputs": [
+					{
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "transferOwnership",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"name": "token",
+						"type": "address"
+					}
+				],
+				"name": "revoked",
+				"outputs": [
+					{
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"name": "beneficiary",
+						"type": "address"
+					},
+					{
+						"name": "start",
+						"type": "uint256"
+					},
+					{
+						"name": "cliffDuration",
+						"type": "uint256"
+					},
+					{
+						"name": "duration",
+						"type": "uint256"
+					},
+					{
+						"name": "revocable",
+						"type": "bool"
+					}
+				],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "TokensReleased",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"name": "token",
+						"type": "address"
+					}
+				],
+				"name": "TokenVestingRevoked",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"name": "previousOwner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "OwnershipTransferred",
+				"type": "event"
+			}
+		],
+		"devdoc": {
+			"methods": {
+				"beneficiary()": {
+					"return": "the beneficiary of the tokens."
+				},
+				"cliff()": {
+					"return": "the cliff time of the token vesting."
+				},
+				"duration()": {
+					"return": "the duration of the token vesting."
+				},
+				"release(address)": {
+					"params": {
+						"token": "ERC20 token which is being vested"
+					}
+				},
+				"released(address)": {
+					"return": "the amount of the token released."
+				},
+				"revocable()": {
+					"return": "true if the vesting is revocable."
+				},
+				"revoke(address)": {
+					"params": {
+						"token": "ERC20 token which is being vested"
+					}
+				},
+				"revoked(address)": {
+					"return": "true if the token is revoked."
+				},
+				"start()": {
+					"return": "the start time of the token vesting."
+				}
+			},
+			"title": "TokenVesting"
+		},
+		"userdoc": {
+			"methods": {
+				"release(address)": {
+					"notice": "Transfers vested tokens to beneficiary."
+				},
+				"revoke(address)": {
+					"notice": "Allows the owner to revoke the vesting. Tokens already vested remain in the contract, the rest are returned to the owner."
+				}
+			}
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/TokenVesting.sol": "TokenVesting"
+		},
+		"evmVersion": "byzantium",
+		"libraries": {},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/TokenVesting.sol": {
+			"keccak256": "0xcace4a867bfecfb483640b96c81895fbf35200bbfa668a6ab9186320c075dde1",
+			"urls": [
+				"bzzr://f7fd51f3cd1b55e1f9331a6b5b3ed848c2d914c0b9595e2757ea4d317260aa57"
+			]
+		},
+		"contracts/math/SafeMath.sol": {
+			"keccak256": "0x399cf91fc60d5cdb79244baec29c0ff0c40bdc158bc7bf4d1199857d1fb55a08",
+			"urls": [
+				"bzzr://eecf6a35cac014a1a4a61a2225b893a9ca0b2e8c42175bed1d9e713e4e6c85de"
+			]
+		},
+		"contracts/ownership/Ownable.sol": {
+			"keccak256": "0x0881cebbc62bad135d3a897e0890e7f85f7443c9f2425e1dd293810ee5a7c5d1",
+			"urls": [
+				"bzzr://1b17f3f86ed0e407574e3d6023ce183e6d2482c1877abd91972bad4c2f0aced6"
+			]
+		},
+		"contracts/token/IERC20.sol": {
+			"keccak256": "0x64878ec00a6cd78d6259f3f94a582b978f6c925e0b9a6adffc1e605632069974",
+			"urls": [
+				"bzzr://f36d7a1eb9b72be08858b8283e6d00cd33e7d31cec7a4998644e466c0ad76bee"
+			]
+		},
+		"contracts/token/SafeERC20.sol": {
+			"keccak256": "0xcc60ac84742febd00d14b932477697621a70c5bc2565938c41e6a4e8f6d8d550",
+			"urls": [
+				"bzzr://179c52bbe11f76c1edd863263b4bd2ee047be838fc5bc5077c6d5c291ecaa09a"
+			]
+		}
+	},
+	"version": 1
+}
